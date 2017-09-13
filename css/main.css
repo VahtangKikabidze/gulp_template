@@ -1,3 +1,4 @@
+/* VARS */
 * {
   outline: none !important;
   text-decoration: none; }
@@ -7,6 +8,19 @@ a, a:hover {
 
 html {
   font-size: 14px; }
+
+header {
+  background: #34393f; }
+  header .head_nav .nav-link {
+    font-size: 0.642rem;
+    color: #fff;
+    font-family: "gothamLight"; }
+    header .head_nav .nav-link.dropdown-toggle:after {
+      font-family: "FontAwesome";
+      content: "\f078";
+      border: 0;
+      color: #ff9933;
+      border-color: transparent; }
 
 /* HAMBURGER */
 .hamburger {

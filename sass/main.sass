@@ -1,16 +1,45 @@
+/* VARS */ 
+
+$openSans: 'Open Sans', sans-serif
+$gothamRegular: 'gothamRegular'
+$gothamLight: 'gothamLight'
+$gothamBold: 'gothamBold'
+$fontawesome: "FontAwesome"
+
+// colors 
+$color-orange: #ff9933
+$color-darckSilver: #34393f
+$color-blue: #1a5ab9
+$color-lightBlue: #568ee1
+$color-green: #1bc61b
+@function calc-rem($px)
+	@return ($px / 28)+rem
+
 *
 	outline: none!important
 	text-decoration: none
+
 a,a:hover
 	text-decoration: none
+
 html
 	font-size: 14px
 
 header 
-
-
-footer
-
+	background:	$color-darckSilver
+	.head_nav
+		.nav-link
+			font-size: 0.642rem
+			color: #fff
+			font-family: $gothamLight
+			&.dropdown-toggle
+				&:after
+					font-family: $fontawesome
+					content: "\f078"
+					border: 0
+					color: $color-orange
+					border-color: transparent
+		
 
 
 /* HAMBURGER */
