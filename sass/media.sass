@@ -1,16 +1,153 @@
+/* VARS */
+
+$firaSans: 'Fira Sans', sans-serif
+$gotham: 'gotham'
+$raleway: 'raleway'
+$regular: 400
+$light: 300
+$thin: 200
+$semibold: 600
+$bold: bold
+$fontawesome: "FontAwesome"
+
+@function calc-rem($px)
+	@return ($px / 28)+rem
+
+=btn_shadow()
+	box-shadow: 0px 7px 30px 0px rgba(0, 0, 0, 0.19)
+
+=btn_radius()
+	border-radius: 35px
+
+=font($font-family,$font-weight,$font-size)
+	font-family: $font-family
+	font-weight: $font-weight
+	font-size: calc-rem($font-size)
+
+// colors
+$red: #ff0d0d
 
 @media (min-width: 576px)
-  html
-    font-size: 16px
+	html
+		font-size: 23px
 
 @media (min-width: 768px)
-  html
-    font-size: 16px
+	html
+		font-size: 25px
 
 @media (min-width: 992px)
-  html
-    font-size: 20px
+	html
+		font-size: 26px
 
 @media (min-width: 1200px)
-  html
-    font-size: 28px
+	html
+		font-size: 28px
+	.container
+		max-width: 1170px
+
+@media (max-width: 1199px)
+	#catalog
+		.main
+			.card-text
+				.btn-block
+					a
+						display: block
+						padding-left: 0
+						padding-right: 0
+						width: 100%
+						text-align: center
+	header
+		nav
+			.nav-item
+				&:after
+					right: calc-rem(-50)
+	.main_slider
+		.single_slide
+			.slide_text
+				font-size: calc-rem(42)
+		.slick-dots, .slick-arrow
+			top: 58%
+@media (max-width: 991px)
+	header
+		nav
+			.nav-item
+				&:after
+					right: calc-rem(-25)
+	#advantages
+		.block
+			&:nth-child(2)
+				.wrap
+					&:after
+						display: none
+	.main_slider
+		.single_slide
+			.slide_text
+				font-size: calc-rem(34)
+		.slick-dots, .slick-arrow
+			top: 66%
+			right: 10%
+		.slick-dots
+			margin-top: -19px
+		.slick-prev
+			margin-top: -50px
+
+@media (max-width: 767px)
+	.hamburger
+		display: inline-block
+	header
+		.nav
+			flex-wrap: nowrap
+			display: none
+		nav
+
+			text-align: center
+			.nav-item
+				.nav-link
+					padding: calc-rem(10) 0
+					font-size: calc-rem(17)
+
+	.index_page
+		header
+			position: static
+			.pre_naw
+				a
+					color: #000
+					strong
+						color: $red
+				.logo
+					a
+						color: #000
+
+				.mail
+					a
+						font-family: $gotham
+						font-size: calc-rem(14)
+						font-weight: $regular
+			nav
+				background: #fbfbfb
+				border-top: 1px solid #f4f4f4
+				border-bottom: 1px solid #f4f4f4
+				.nav-item
+					&:after
+						display: none
+					.nav-link
+						color: #000
+
+	#advantages
+		.block
+			.wrap
+				&:after
+					display: none
+	#redemptionCars
+		.block
+			&:nth-child(2)
+				.wrap
+					&:after
+						display: none
+	.main_slider
+		.slick-dots,.slick-arrow
+			display: none!important
+	#paymentDelivery
+		.redemption_cars
+			input[type="submit"]
+				padding: calc-rem(12) 0 calc-rem(20)
